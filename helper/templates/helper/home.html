@@ -1,0 +1,21 @@
+{% extends "helper/base.html" %}
+{% block content %}
+<center><h2>Helper Reviews</h2></center>
+<center><small>by Kent</small></center>
+<br>
+<table>
+
+  <tr>
+    <th>Helper</th>
+    <th>Helper Rank</th>
+    <th>Score</th>
+  </tr>
+{% for post in posts %}
+  <tr>
+    <td>{{ post.helper }}</td>
+    <td>{{ post.helper_rank }}</td>
+    <td>{{ post.helper_point }}</td>
+  </tr>
+{% endfor %}  
+</table>
+{% endblock content %}
